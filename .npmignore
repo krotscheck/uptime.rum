@@ -1,0 +1,5 @@
+release.sh
+*.tgz
+.travis.yml
+yarn.lock
+.idea

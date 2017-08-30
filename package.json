@@ -1,0 +1,12 @@
+{
+  "name": "uptime.rum",
+  "version": "0.0.0",
+  "description": "The uptime.com rum.js package",
+  "main": "rum.js",
+  "keywords": [
+    "uptime.com"
+  ],
+  "author": "support@uptime.com",
+  "license": "ISC",
+  "devDependencies": {}
+}
