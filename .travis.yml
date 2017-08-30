@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '7'
+before_install:
+- openssl aes-256-cbc -K $encrypted_4645ace510c6_key -iv $encrypted_4645ace510c6_iv -in uptime_github_deploy_key.enc -out ./uptime_github_deploy_key -d
+script:
+- "./release.sh"
+deploy:
+  provider: npm
+  email: krotscheck@gmail.com
+  api_key:
+    secure: 4ITYAmZJaFpmzdJmv47nzBJiNo32ijeKyMMuU8DJ3IJzw+tTrEv+aEXjawlHFF4XTbCQAJ+1jl1E1b3ZFdyuzy00lEqx5H+bHuXCZl79dOoCkjBpfH+nHm1IORiZGcCW1g/J56saMp4aFjJbYKYe6fbiKE5YK5ME0HyjUPi3VWu56c5i+XZD5F2pgJJF3OWeCf5w17ixAKWYDne8yPt12BU/9pX5P0K46/fntGiwLQDd6YVSMSA3AHGZk8FlEkqseSAGwpn3eoEndZ+btLubXir+RTQsKXzwfsgpzC7+RKsri+hhm8B/zDDRrUanCUzkGaqlr23r7JUbK6vY/ZrX/ZX1AlNic1Lb5rr527o30WTyRrIdlGJhQOHfxvut6hsvAArJ3hbAq/daKILwI4yv4gR9ZhxJr3VIMh/SrnhH1aKCyRvlVd6u+NeZSvaAaUF5mb8S6eV9o6fSDW1mTSWjSGJFOsJd8+YNDLBFrEsnbnQIhMHwr1ZWfCa/VqPXN4Rf++uYqXGW3MdHa0rKpGRiRZoPS0GA9llXX2TsN1izIoYBKJ+9y6h0Qn8oDp72tVE2EdPhXFuR25U4WmvXpKgp8kQ0uCaAoh1Y5SIak96CVUoDiaePQAZ113qTUGWO4TEy8sRm71bMdvzE7sKyy9rZ2rN7hhFgvoTk+Hyui/GbfzQ=
+  on:
+    tags: true
+    branch: master
+    repo: krotscheck/uptime.rum
