@@ -1,6 +1,6 @@
 {
   "name": "uptime.rum",
-  "version": "1.115.0",
+  "version": "1.116.0",
   "description": "The uptime.com rum.js package",
   "main": "rum.js",
   "keywords": [
